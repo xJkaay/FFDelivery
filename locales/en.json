@@ -1,0 +1,27 @@
+{
+    "delivery:stock_zone":"Restock Delivery Foods",
+    "delivery:start_delivery":"Start Food Delivery",
+    "stock_zone":"[E] Restock",
+    "stock_zone_menu":"Restock Menu",
+    "restock":"Restock",
+    "start_delivery":"[E] Start Food Delivery",
+    "start_delivery_menu":"Start Food Delivery",
+    "deliver":"[E] Deliver",
+    "max_stock":"No more space available",
+    "no_stock":"No delivery food stocks",
+    "no_required_item":"You don't have the required item",
+    "no_delivery_item":"You don't have the delivery item",
+    "no_money":"You don't have enough money",
+    "error":"An error occured",
+    "requesting":"Requesting Delivery",
+    "delivery":"Drop-Off",
+    "knocking":"Knocking...",
+    "giving_delivery":"Giving Delivery to Customer",
+    "adding_stock":"Adding Stock...",
+    "cooldown":"You are on cooldown. Please wait %s secs",
+    "delivery_started":"Delivery Food acquired. Check your GPS for the location of the customer",
+    "check_stock":"Check Stocks",
+    "checking_stocks":"Checking Stocks...",
+    "current_stocks":"Current Stock: %s"
+
+}
