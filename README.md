@@ -18,6 +18,7 @@ A highly optimized and highly configurable script made for FiveM by Kloud Develo
 **Required**
 
 * [ox_lib](https://github.com/overextended/ox_lib)
+* [oxmysql](https://github.com/overextended/oxmysql)
 
 **Target**
 
