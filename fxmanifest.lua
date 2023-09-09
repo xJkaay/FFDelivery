@@ -3,6 +3,13 @@ game 'gta5'
 
 lua54 'yes'
 
+author 'Kloud Development'
+description 'Advanced Fast Food Delivery by Kloud Development'
+discord 'https://discord.gg/DbqC2SWzJk'
+
+version '1.0.0'
+
+
 shared_scripts {
     '@ox_lib/init.lua',
     'shared/*.lua',
