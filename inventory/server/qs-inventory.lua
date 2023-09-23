@@ -15,8 +15,7 @@ CanCarryItem = function(inv, item, amount)
 end
 
 GetItemCount = function(inv, item)
-    if Inventory:GetItemTotalAmount(inv, item) >= 1 then return true end
-    return false
+    return Inventory:GetItemTotalAmount(inv, item)
 end
 
 GetSlotWithItem = function(inv, item, metadata, strict)

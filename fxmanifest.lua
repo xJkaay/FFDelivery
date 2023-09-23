@@ -7,7 +7,7 @@ author 'Kloud Development'
 description 'Advanced Fast Food Delivery by Kloud Development'
 discord 'https://discord.gg/DbqC2SWzJk'
 
-version '1.0.0'
+version '1.0.1'
 
 
 shared_scripts {
