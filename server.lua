@@ -149,24 +149,23 @@ end
 
 CreateThread(Cooldown)
 
--- -- Version Check from https://github.com/CodineDev/cdn-fuel
 
--- local updatePath
--- local resourceName
+local updatePath
+local resourceName
 
--- CheckVersion = function(err, response, headers)
---     local curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
--- 	if response == nil then print("^1"..resourceName.." check for updates failed ^7") return end
---     if curVersion ~= nil and response ~= nil then
--- 		if curVersion == response then Color = "^2" else Color = "^1" end
---         print("\n^1----------------------------------------------------------------------------------^7")
---         print(resourceName.."'s latest version is: ^2"..response.."!\n^7Your current version: "..Color..""..curVersion.."^7!\nIf needed, update from https://github.com"..updatePath.."")
---         print("^1----------------------------------------------------------------------------------^7")
---     end
--- end
+CheckVersion = function(err, response, headers)
+    local curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
+	if response == nil then print("^1"..resourceName.." check for updates failed ^7") return end
+    if curVersion ~= nil and response ~= nil then
+		if curVersion == response then Color = "^2" else Color = "^1" end
+        print("\n^1----------------------------------------------------------------------------------^7")
+        print(resourceName.."'s latest version is: ^2"..response.."!\n^7Your current version: "..Color..""..curVersion.."^7!\nIf needed, update from https://github.com"..updatePath.."")
+        print("^1----------------------------------------------------------------------------------^7")
+    end
+end
 
--- CreateThread(function()
--- 	updatePath = "/kloudzxc/kloud-food-delivery"
--- 	resourceName = "kloud-food-delivery ("..GetCurrentResourceName()..")"
--- 	PerformHttpRequest("https://raw.githubusercontent.com"..updatePath.."/master/version", CheckVersion, "GET")
--- end)
+CreateThread(function()
+	updatePath = "/xJkaay/FFDelivery"
+	resourceName = "FFDelivery    ("..GetCurrentResourceName()..")"
+	PerformHttpRequest("https://raw.githubusercontent.com"..updatePath.."/master/version", CheckVersion, "GET")
+end)
