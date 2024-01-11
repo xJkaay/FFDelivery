@@ -17,7 +17,7 @@ AddTarget = function (coords, radius, options)
     end
     exports['qb-target']:AddCircleZone(options[1].name, coords, radius, {
         name = options[1].name,
-        debugPoly = KloudDev.Debug
+        debugPoly = FFD.Debug
     }, {
         options = optionsTbl,
         distance = distance

@@ -15,7 +15,7 @@ SpawnedEntities = {
 }
 
 local CreateTargets = function()
-    for job, data in pairs(KloudDev.Locations) do
+    for job, data in pairs(FFD.Locations) do
         for k, v in pairs(data.positions) do
             if v.type == "target" then
                 local options = {
@@ -24,7 +24,7 @@ local CreateTargets = function()
                         name = 'delivery:'..k,
                         icon = "fas fa-hand-holding-hand",
                         distance = 2.5,
-                        debug = KloudDev.Debug,
+                        debug = FFD.Debug,
                         canInteract = function()
                             if v.job.required then
                                 if PlayerJob.name == v.job.job_name and not _G.OnGoing then return true end
@@ -45,7 +45,7 @@ local CreateTargets = function()
                         name = 'delivery:check_stocks'..job..k,
                         icon = "fas fa-boxes-stacked",
                         distance = 2.5,
-                        debug = KloudDev.Debug,
+                        debug = FFD.Debug,
                         canInteract = function()
                             if v.job.required then
                                 if PlayerJob.name == v.job.job_name and not _G.OnGoing then return true end
@@ -79,7 +79,7 @@ local CreateTargets = function()
                     coords = vec3(v.coords.x, v.coords.y, v.coords.z + 1),
                     size = vec3(1.7, 1.7, 2),
                     rotation = v.coords.w,
-                    debug = KloudDev.Debug,
+                    debug = FFD.Debug,
                     onEnter = function()
                         if _G.OnGoing then return end
 
@@ -106,7 +106,7 @@ local CreateTargets = function()
 end
 
 local CreateBlips = function()
-    for _, data in pairs(KloudDev.Locations) do
+    for _, data in pairs(FFD.Locations) do
         local blip = data.blip
         if blip.enabled then
             local jobBlip = AddBlipForCoord(blip.coords.x, blip.coords.y, blip.coords.z)

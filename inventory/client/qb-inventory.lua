@@ -12,7 +12,7 @@ for i = 1, #qbVariations do
     else
         foundInv = true
         Inventory = exports[qbVariations[i]]
-        KloudDev.ImagePath = "https://cfx-nui-".. qbVariations[i] .. "/html/images/"
+        FFD.ImagePath = "https://cfx-nui-".. qbVariations[i] .. "/html/images/"
     end
 end
 

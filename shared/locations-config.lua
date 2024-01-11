@@ -1,4 +1,4 @@
-KloudDev.Locations = {
+FFD.Locations = {
     ["burgershot"] = {
         max_stocks = 15,
         bag_model = `prop_food_bs_bag_01`,
@@ -6,9 +6,9 @@ KloudDev.Locations = {
         blip = {
             enabled = true,
             coords  = vec3(-1197.93, -890.53, 13.89),
-            label = "Burgershot",
+            label = "Burgershot Delivery Job",
             sprite = 536,
-            scale = 0.9,
+            scale = 0.2,
             colour = 1,
         },
         delivery = {
@@ -16,12 +16,12 @@ KloudDev.Locations = {
             money_type = "cash",
             deposit = {
                 enabled = true,
-                amount = 200
+                amount = 25
             },
             reward = {
                 enabled = true,
-                min = 300,
-                max = 350
+                min = 100,
+                max = 150
             }
         },
         restock = {
@@ -30,8 +30,8 @@ KloudDev.Locations = {
             reward = {
                 enabled = true,
                 type = "cash",
-                min = 100,
-                max = 200
+                min = 200,
+                max = 250
             }
         },
         positions = {
@@ -41,7 +41,7 @@ KloudDev.Locations = {
                     required = false,
                     job_name = nil,
                 },
-                coords = vec4(-1198.74, -891.4, 12.89, 344.91),
+                coords = vec4(-1196.2953, -891.9724, 12.9742, 38.5648),
                 ped = {
                     enabled = true,
                     model = "csb_burgerdrug",
@@ -55,9 +55,9 @@ KloudDev.Locations = {
                 type = "target",
                 job = {
                     required = true,
-                    job_name = "burgershot",
+                    job_name = "burger_shot",
                 },
-                coords = vec4(-1198.81, -893.19, 12.89, 167.87),
+                coords = vec4(-1202.5074, -899.5958, 12.9742, 310.2796),
                 ped = {
                     enabled = true,
                     model = "csb_burgerdrug",

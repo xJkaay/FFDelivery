@@ -9,20 +9,20 @@ StartDelivery = function(data)
 end
 
 PickDropOff = function()
-    local count = math.random(1, #KloudDev.Delivery.locations)
+    local count = math.random(1, #FFD.Delivery.locations)
 
-    return KloudDev.Delivery.locations[count]
+    return FFD.Delivery.locations[count]
 end
 
 CreateWaypoint = function(dropoff)
     local coords = dropoff.coords
     _G.WaypointBlip = AddBlipForCoord(coords.x, coords.y, coords.z)
-    SetBlipSprite(_G.WaypointBlip, KloudDev.Delivery.blip.sprite)
-    SetBlipScale(_G.WaypointBlip, KloudDev.Delivery.blip.scale)
-    SetBlipColour(_G.WaypointBlip, KloudDev.Delivery.blip.colour)
+    SetBlipSprite(_G.WaypointBlip, FFD.Delivery.blip.sprite)
+    SetBlipScale(_G.WaypointBlip, FFD.Delivery.blip.scale)
+    SetBlipColour(_G.WaypointBlip, FFD.Delivery.blip.colour)
     SetBlipDisplay(_G.WaypointBlip, 4)
     BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString(KloudDev.Delivery.blip.label)
+    AddTextComponentString(FFD.Delivery.blip.label)
     EndTextCommandSetBlipName(_G.WaypointBlip)
 
     ClearGpsMultiRoute()
@@ -38,7 +38,7 @@ CreateInteraction = function(dropoff, data)
             name = "delivery:drop-off",
             icon = "fas fa-hand-holding",
             distance = 2.5,
-            debug = KloudDev.Debug,
+            debug = FFD.Debug,
             canInteract = function()
                 if _G.OnGoing and not _G.Busy then return true end
                 return false
@@ -57,7 +57,7 @@ CreateInteraction = function(dropoff, data)
             coords = vec3(dropoff.coords.x, dropoff.coords.y, dropoff.coords.z),
             size = vec3(1.7, 1.7, 2),
             rotation = dropoff.coords.w,
-            debug = KloudDev.Debug,
+            debug = FFD.Debug,
             onEnter = function()
                 if not _G.OnGoing then return end
 
@@ -93,7 +93,7 @@ DropOff = function(dropoff, data)
     SpawnedEntities.Delivery_Prop[1] = CreateBag(cache.ped, data.bag_model)
 
     if dropoff.ped then
-        ped = SpawnPed(KloudDev.Delivery.peds[math.random(1, #KloudDev.Delivery.peds)], vec3(dropoff.coords.x, dropoff.coords.y, dropoff.coords.z - 1))
+        ped = SpawnPed(FFD.Delivery.peds[math.random(1, #FFD.Delivery.peds)], vec3(dropoff.coords.x, dropoff.coords.y, dropoff.coords.z - 1))
         SetEntityHeading(ped, dropoff.coords.w)
         PlayAnim(ped, "mp_common", "givetake1_a", 2000, true)
         PlayAnim(cache.ped, "mp_common", "givetake1_b", 2000, true)

@@ -3,9 +3,8 @@ game 'gta5'
 
 lua54 'yes'
 
-author 'Kloud Development'
-description 'Advanced Fast Food Delivery by Kloud Development'
-discord 'https://discord.gg/DbqC2SWzJk'
+author 'FFDevelopment'
+description 'Advanced Fast Food Delivery by FFDevelopment'
 
 version '1.0.1'
 

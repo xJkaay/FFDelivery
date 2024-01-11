@@ -1,26 +1,26 @@
 lib.locale()
 
 DrawText = function (msg)
-    if KloudDev.DrawText == 'ox' then
-        local pos = KloudDev.DrawTextAlignment.."-center"
+    if FFD.DrawText == 'ox' then
+        local pos = FFD.DrawTextAlignment.."-center"
         lib.showTextUI(msg, {
             position = pos or "right-center"
         })
-    elseif KloudDev.DrawText == 'qb' then
-        exports['qb-core']:DrawText(msg, KloudDev.DrawTextAlignment)
+    elseif FFD.DrawText == 'qb' then
+        exports['qb-core']:DrawText(msg, FFD.DrawTextAlignment)
     end
 end
 
 HideText = function ()
-    if KloudDev.DrawText == 'ox' then
+    if FFD.DrawText == 'ox' then
         lib.hideTextUI()
-    elseif KloudDev.DrawText == 'qb' then
+    elseif FFD.DrawText == 'qb' then
         exports['qb-core']:HideText()
     end
 end
 
 Progress = function (duration, label, dict, clip)
-    if KloudDev.Progress == "ox-circle" then
+    if FFD.Progress == "ox-circle" then
         local anim = nil
         if dict and clip then
             anim = {
@@ -33,7 +33,7 @@ Progress = function (duration, label, dict, clip)
             label = label,
             useWhileDead = false,
             canCancel = false,
-            position = KloudDev.ProgressCirclePos or "bottom",
+            position = FFD.ProgressCirclePos or "bottom",
             disable = {
                 move = true,
                 car = true,
@@ -42,7 +42,7 @@ Progress = function (duration, label, dict, clip)
             },
             anim = anim,
         })
-    elseif KloudDev.Progress == "ox-bar" then
+    elseif FFD.Progress == "ox-bar" then
         local anim = nil
         if dict and clip then
             anim = {
@@ -68,7 +68,7 @@ end
 
 Notify = function (msg, type, duration)
     local dur = duration or 3000
-    if KloudDev.Notify == "ox" then
+    if FFD.Notify == "ox" then
         if GetResourceState("ox_lib") ~= "started" then print("You need ox_lib running for the notifications to work") return end
         if type == "error" then
             lib.notify({
@@ -76,7 +76,7 @@ Notify = function (msg, type, duration)
                 icon = 'ban',
                 duration = dur,
                 iconColor = '#C53030',
-                position = KloudDev.NotifyPos or "top-right"
+                position = FFD.NotifyPos or "top-right"
             })
         elseif type == "success" then
             lib.notify({
@@ -84,21 +84,21 @@ Notify = function (msg, type, duration)
                 icon = 'check',
                 duration = dur,
                 iconColor = '#30c56a',
-                position = KloudDev.NotifyPos or "top-right"
+                position = FFD.NotifyPos or "top-right"
             })
         end
-    elseif KloudDev.Notify == "qb" then
+    elseif FFD.Notify == "qb" then
         TriggerEvent('QBCore:Notify', msg, type, dur)
-    elseif KloudDev.Notify == "esx" then
+    elseif FFD.Notify == "esx" then
         TriggerEvent('esx:showNotification', msg, type, dur)
-    elseif KloudDev.Notify == "ps" then
+    elseif FFD.Notify == "ps" then
         exports['ps-ui']:Notify(msg, type, dur)
     end
 end
 
 SVNotify = function (source, msg, type, duration)
     local dur = duration or 3000
-    if KloudDev.Notify == "ox" then
+    if FFD.Notify == "ox" then
         local randomID = math.random(1, 500)
         if type == "error" then
             TriggerClientEvent('ox_lib:notify', source, {
@@ -106,7 +106,7 @@ SVNotify = function (source, msg, type, duration)
                 duration = dur,
                 icon = 'ban',
                 iconColor = '#C53030',
-                position = KloudDev.NotifyPos or "top-right"
+                position = FFD.NotifyPos or "top-right"
             })
         elseif type == "success" then
             TriggerClientEvent('ox_lib:notify', source, {
@@ -114,14 +114,14 @@ SVNotify = function (source, msg, type, duration)
                 duration = dur,
                 icon = 'check',
                 iconColor = '#30c56a',
-                position = KloudDev.NotifyPos or "top-right"
+                position = FFD.NotifyPos or "top-right"
             })
         end
-    elseif KloudDev.Notify == "qb" then
+    elseif FFD.Notify == "qb" then
         TriggerClientEvent('QBCore:Notify', source, msg, type, dur)
-    elseif KloudDev.Notify == "esx" then
+    elseif FFD.Notify == "esx" then
         TriggerClientEvent('esx:showNotification', source, msg, type, dur)
-    elseif KloudDev.Notify == "ps" then
+    elseif FFD.Notify == "ps" then
         TriggerClientEvent('ps-ui:Notify', source, msg, type, dur)
     end
 end

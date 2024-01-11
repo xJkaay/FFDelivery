@@ -1,14 +1,14 @@
-KloudDev = {}
+FFD = {}
 
-KloudDev.Debug = false
+FFD.Debug = false
 
-KloudDev.ImagePath = "https://cfx-nui-ox_inventory/web/images/"
+FFD.ImagePath = "https://cfx-nui-ox_inventory/web/images/"
 
-KloudDev.DrawSprite = true -- ox_target indicator
-KloudDev.DrawText = "ox" -- "qb", "ox"
-KloudDev.Menu = "ox" -- "qb", "ox"
-KloudDev.Notify = "ox" -- "qb", "esx", "ox", "ps"
-KloudDev.NotifyPos = "top-right" -- For ox_lib // 'top', 'top-right', 'top-left', 'bottom', 'bottom-right', 'bottom-left', 'center-right', 'center-left' // For QB change qb-core/config.lua
-KloudDev.Progress = "ox-circle" -- "ox-bar", "ox-circle"
-KloudDev.ProgressCirclePos = "bottom" -- "middle", "bottom"
-KloudDev.DrawTextAlignment = "right" -- "top", "right", "left"
+FFD.DrawSprite = true -- ox_target indicator
+FFD.DrawText = "ox" -- "qb", "ox"
+FFD.Menu = "ox" -- "qb", "ox"
+FFD.Notify = "ox" -- "qb", "esx", "ox", "ps"
+FFD.NotifyPos = "top-right" -- For ox_lib // 'top', 'top-right', 'top-left', 'bottom', 'bottom-right', 'bottom-left', 'center-right', 'center-left' // For QB change qb-core/config.lua
+FFD.Progress = "ox-bar" -- "ox-bar", "ox-circle"
+FFD.ProgressCirclePos = "bottom" -- "middle", "bottom"
+FFD.DrawTextAlignment = "right" -- "top", "right", "left"

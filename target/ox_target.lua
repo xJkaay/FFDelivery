@@ -4,8 +4,8 @@ AddTarget = function (coords, radius, options)
     return exports.ox_target:addSphereZone({
         coords = coords,
         radius = radius or 2.0,
-        debug = KloudDev.Debug,
-        drawSprite = KloudDev.DrawSprite,
+        debug = FFD.Debug,
+        drawSprite = FFD.DrawSprite,
         options = options
     })
 end
