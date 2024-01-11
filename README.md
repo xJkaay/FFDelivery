@@ -1,6 +1,6 @@
-# Kloud Fast Food Delivery
+#FFD Fast Food Delivery
 
-A highly optimized and highly configurable script made for FiveM by Kloud Development.
+A highly optimized and highly configurable script made for FiveM by FFDevelopment.
 
 # Preview
 * https://youtu.be/HJ1yKEIznsc
@@ -85,9 +85,9 @@ ensure FRAMEWORK # es_extended / qb-core
 ensure ox_lib
 ensure TARGET # ox_target / qb-target
 ensure INVENTORY # ox_inventory / qb-inventory / lj-inventory
-ensure kloud-food-delivery
+ensure FFDdelivery
 ```
 
 # Support & Suggestions
     
-Join My [Discord Server](https://discord.gg/DbqC2SWzJk) for Support and Updates!
+Join My [Discord Server](https://discord.gg/thNRRprC) for Support and Updates!
